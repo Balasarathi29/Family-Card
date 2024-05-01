@@ -1,0 +1,124 @@
+/* First i am Reset My page*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Fix the Name with nowrap method*/
+.nowrap{
+    white-space: nowrap;
+}
+
+/* Fix the Page Behaviour*/
+html{
+    scroll-behavior: smooth;
+}
+
+/*Body style*/
+body{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: aqua;
+    background-image: radial-gradient(whitesmoke,aqua);
+}
+header,footer{
+    position: sticky;
+    text-align: center;
+    background-color: #1e293b;
+    color: white;
+}
+header{
+    top: 0;
+}
+footer{
+    bottom: 0;
+}
+nav{
+    background-color: white;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2px;
+    border: 2px solid #000;
+    font-weight: bolder;
+}
+nav a ,nav a:visited{
+    color: black;
+}
+nav a:hover,nav a:focus{
+    color: hsla(0, 0%, 0%, 0.345);
+}
+
+/* Main Section*/
+main{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 5px;
+}
+
+/* Cards */
+.card{
+    scroll-margin-top: 8rem;
+    background-color: rgb(104, 219, 182);
+    border: 2px solid black;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: min(100%,350px);
+    padding: 1rem;
+    margin-top: 10px;
+}
+.card figure{
+    display: flex;
+    flex-flow: column nowrap;
+}
+.card img{
+    border: 5px double white;
+    border-radius: 50%;
+}
+.card figcaption{
+    text-align: center;
+    margin: 1rem;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+/*Small*/
+@media screen and (min-width:576px){
+    main{
+        justify-content: center;
+        flex-flow: row wrap;
+        padding: 1.2rem;
+    }
+    .card{
+        width: min(100%,400px);
+    }
+
+}
+
+/*medium*/
+@media screen and (min-width:768px){
+    nav{
+        display: none;
+    }
+    .card{
+        width: min(100%,325px);
+    }
+}
+/*Large*/
+@media screen and (min-width:995){
+    .card{
+        width: min(100%,400px);
+    }
+}
